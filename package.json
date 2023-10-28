@@ -9,11 +9,9 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+    "json-server": "^0.17.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "json-server": "^0.17.4"
   }
 }
