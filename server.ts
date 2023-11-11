@@ -79,7 +79,7 @@ function readUsers() {
 
 function appendUsers(newUser: any) {
   console.log("Here");
-  const dbRaw = fs.readFileSync('./server/db.json');
+  const dbRaw = fs.readFileSync(db);
   let obj = JSON.parse(dbRaw);
   obj.users.push(newUser);
   fs.writeFileSync('./server/db.json', JSON.stringify(obj));
