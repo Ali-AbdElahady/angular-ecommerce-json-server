@@ -82,5 +82,5 @@ function appendUsers(newUser: any) {
   const dbRaw = fs.readFileSync(db);
   let obj = JSON.parse(dbRaw);
   obj.users.push(newUser);
-  fs.writeFileSync('./server/db.json', JSON.stringify(obj));
+  fs.writeFileSync(db, JSON.stringify(obj));
 }
