@@ -71,7 +71,7 @@ function isAuthorized(req: any) {
 }
 
 function readUsers() {
-    const dbRaw = fs.readFileSync(db);
+    const dbRaw = fs.readFileSync('./db.json');
     const users = JSON.parse(dbRaw).users;
 
     return users;
@@ -79,8 +79,8 @@ function readUsers() {
 
 function appendUsers(newUser: any) {
   console.log("Here");
-  const dbRaw = fs.readFileSync(db);
+  const dbRaw = fs.readFileSync('./db.json');
   let obj = JSON.parse(dbRaw);
   obj.users.push(newUser);
-  fs.writeFileSync(db, JSON.stringify(obj));
+  fs.writeFileSync('./db.json', JSON.stringify(obj));
 }
